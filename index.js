@@ -1,4 +1,4 @@
-/*
+
 async function run() {
   // Create a simple model.
   const model = tf.sequential();
@@ -16,8 +16,8 @@ async function run() {
       model.predict(tf.tensor2d([20], [1, 1])).dataSync();
 }
 run();
-*/
 
+/*
 async function run() {
   // Create a simple model.
   const model = tf.sequential();
@@ -28,7 +28,7 @@ async function run() {
   //model.compile({loss: 'meanSquaredError', optimizer: 'rmsprop'});
   // Generate some synthetic data for training. (y = 2x - 1)
   const xs = tf.tensor2d([[0,0],[0,1],[1,0],[1,1]]);
-  const ys = tf.tensor2d([0,1,1,0]);
+  const target_data = tf.tensor2d([[0],[1],[1],[0]]);
   // Train the model using the data.
   await model.fit(xs, ys, {epochs: 250});
   // Use the model to do inference on a data point the model hasn't seen.
@@ -37,6 +37,7 @@ async function run() {
       model.predict(tf.tensor2d([1, 0])).dataSync();
 }
 run();
+*/
 /*
 //var tf = require('@tensorflow/tfjs');
 
