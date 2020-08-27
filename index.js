@@ -1,3 +1,4 @@
+/*
 async function run() {
   // Create a simple model.
   const model = tf.sequential();
@@ -15,9 +16,10 @@ async function run() {
       model.predict(tf.tensor2d([20], [1, 1])).dataSync();
 }
 run();
+*/
 
-/*
-var tf = require('@tensorflow/tfjs');
+
+//var tf = require('@tensorflow/tfjs');
 
 async function train_test() {
 
@@ -30,17 +32,23 @@ model.compile({loss: 'meanSquaredError', optimizer: 'rmsprop'});
 const training_data = tf.tensor2d([[0,0],[0,1],[1,0],[1,1]]);
 const target_data = tf.tensor2d([[0],[1],[1],[0]]);
 
+await model.fit(xs, ys, {epochs: 250});
+  // Use the model to do inference on a data point the model hasn't seen.
+  // Should print approximately 39.
+document.getElementById('out').innerText = model.predict(target_data).dataSync();
+  /*
 for (let i = 1; i < 100 ; ++i) {
  var h = await model.fit(training_data, target_data, {epochs: 30});
    console.log("Loss after Epoch " + i + " : " + h.history.loss[0]);
 }
 
  model.predict(training_data).print();
+ */
 
 }
 
 train_test();
-*/
+
 
 /*
 // Tiny TFJS train / predict example.
