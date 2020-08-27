@@ -63,7 +63,8 @@ explore the API. -->
             batchSize: 1,
             epochs: 5000
         });
-        document.getElementById("output").innerText = model.predict(xs).dataSync();
+        model.predict(training_data).print();
+        //document.getElementById("output").innerText = model.predict(xs).dataSync();
     }
     predictOutput();
 </script>
