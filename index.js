@@ -35,7 +35,7 @@ const target_data = tf.tensor2d([[0],[1],[1],[0]]);
 await model.fit(xs, ys, {epochs: 250});
   // Use the model to do inference on a data point the model hasn't seen.
   // Should print approximately 39.
-document.getElementById('out').innerText = model.predict(target_data).dataSync();
+document.getElementById('micro-out-div').innerText = model.predict(target_data).dataSync();
   /*
 for (let i = 1; i < 100 ; ++i) {
  var h = await model.fit(training_data, target_data, {epochs: 30});
