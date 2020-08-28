@@ -70,7 +70,6 @@ train_test();
 async function laod_and_test() {
  
   model = await tf.loadLayersModel('XOR/web_model/model.json').then(model => {
-  model.predict();
   
   model.summary();
   document.getElementById('micro-out-div').innerText = model.predict(tf.zeros([1,2])).dataSync();
