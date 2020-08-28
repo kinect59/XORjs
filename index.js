@@ -1,4 +1,4 @@
-
+/*
 async function run() {
   // Create a simple model.
   const model = tf.sequential();
@@ -16,7 +16,7 @@ async function run() {
       model.predict(tf.tensor2d([20], [1, 1])).dataSync();
 }
 run();
-
+*/
 /*
 async function run() {
   // Create a simple model.
@@ -65,7 +65,7 @@ for (let i = 1; i < 100 ; ++i) {
 train_test();
 */
 
-/*
+
 // Tiny TFJS train / predict example.
 async function laod_and_test() {
  
@@ -80,4 +80,3 @@ async function laod_and_test() {
 }
 
 laod_and_test();
-*/
