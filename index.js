@@ -69,7 +69,7 @@ train_test();
 // Tiny TFJS train / predict example.
 async function laod_and_test() {
  
-  model = await tf.loadModel('XOR/web_model/model.json').then(model => {
+  model = await tf.loadLayersModel('XOR/web_model/model.json').then(model => {
   model.predict();
   
   model.summary();
