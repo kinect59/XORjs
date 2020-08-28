@@ -76,7 +76,7 @@ async function laod_and_test() {
   document.getElementById('micro-out-div').innerText = model.predict(tf.zeros([1,2])).dataSync();
   //y = model.predict(tf.zeros([1,2])) 
   //document.getElementById('out').innerHTML = y.dataSync()[0]
-  
+  });
 }
 
 laod_and_test();
